@@ -1,0 +1,26 @@
+[package]
+name = "tui-image-viewer"
+description = "Simple text-based user interface image viewer"
+keywords = ["image", "viewer", "tui", "terminal"]
+categories = ["command-line-utilities"]
+version = "0.1.0"
+authors = ["Jesús Hernández <jesushdez@protonmail.com>"]
+edition = "2018"
+license = "Unlicense"
+repository = "https://github.com/jhg/tui-image-viewer"
+readme = "README.md"
+
+[dependencies]
+image = "^0.23"
+term_size = "^0.3"
+crossterm = "^0.17"
+structopt = "^0.3"
+
+[profile.release]
+incremental = false
+debug = false
+debug-assertions = false
+overflow-checks = false
+codegen-units = 1
+opt-level = 3
+lto = true
